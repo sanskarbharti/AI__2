@@ -1,0 +1,8 @@
+version: '2'
+services:
+  jpf:
+    image: cynrd/jpf-symbc
+    volumes:
+    - $PWD/myJPF:/jpf/myJPF
+    working_dir: /jpf/myJPF
+    command: bash -c "ant && /jpf/jpf-core/bin/jpf Example.jpf"
